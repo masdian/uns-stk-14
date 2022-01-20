@@ -100,7 +100,7 @@ top:1em;right:1em;
 
 .pull.center[
 
-## **ANOVA - Satu Faktor**
+## **Pendahuluan**
 
 ]
 
@@ -116,6 +116,8 @@ dengan ragam populasi diketahui
 - Dapat digunakan untuk uji hipotesis terhadap rataan satu populasi, selisih rataan dua populasi
 
 ]
+
+--
 
 .pull-right[
 
@@ -214,6 +216,8 @@ Apakah terdapat rataan hasil produksi yang berbeda pada ketiga kabupaten tersebu
 
 ]
 
+--
+
 .pull-right[
 
 ### **Model Linear Aditif**
@@ -282,6 +286,8 @@ Jika ulangan .red[**tidak sama**]: `\(r_1\ne r_2\ne\dots \ne r_t\)`
 | Total     | `\(\sum r_i-1\)`    | JKT   |     |         |
 ]
 
+--
+
 .pull-right[
 
 Langkah-langkah perhitungan:
@@ -319,6 +325,8 @@ Langkah-langkah perhitungan:
 
 ]
 
+--
+
 .pull-right[
 Tabel perhitungan `\(Y^2_{ij}\)`
 &lt;br&gt;
@@ -345,9 +353,9 @@ Tabel perhitungan `\(Y^2_{ij}\)`
 
 ---
 
-### Tabel ANOVA
-
 .pull-left[
+
+### Tabel ANOVA
 
 | Sumber Keragaman | Derajat Bebas (db) | Jumlah Kuadrat (JK) | Kuadrat Tengah (KT) | `\(F_0\)` |
 | :--: | :--: | :--: | :--: | :--: |
@@ -362,9 +370,23 @@ Karena `\(F_0=22.63&gt;F_{0.05,(2,12)}\)`, maka `\(H_0\)` ditolak. Cukup bukti u
 
 ]
 
+--
+
 .pull-right[
 
 **Latihan**
+
+Terdapat 3 kabupaten yang memiliki hasil produksi karet di Jawa Timur. Masing-masing kabupaten diambil hasil produksi pada 5 lahan karet yang berbeda. Diperoleh hasil sebagai berikut (dalam ton):
+
+| Kebun ke-   | Kab A   | Kab B   | Kab C   |
+| :--:        | :--:    | :--:    | :--:    |
+| 1           | 5       | 6       | 7       |
+| 2           | 7       | 9       | 6       |
+| 3           | 6       | 9       | 4       |
+| 4           | 7       | 4       | 3       |
+| 5           | 8       | 2       | 5       |
+
+Apakah terdapat rataan hasil produksi yang berbeda pada ketiga kabupaten tersebut?
 
 ]
 
@@ -509,7 +531,7 @@ Karena `\(F_0=22.63&gt;F_{0.05,(2,12)}\)`, maka `\(H_0\)` ditolak. Cukup bukti u
 
 .pull-left[
 
-### Tabel Kontingensi Dua Arah
+### Tabel Kontingensi Dua Arah `\((2\times2)\)`
 
 &lt;table class="tg"&gt;
 &lt;thead&gt;
@@ -555,6 +577,8 @@ Keterangan:
 
 ]
 
+--
+
 .pull-right[
 
 ### Uji Hipotesis untuk mengetahui &lt;br&gt; ada atau tidaknya asosiasi &lt;br&gt;antar peubah
@@ -594,32 +618,86 @@ Jika `\(H_0\)` benar, maka `\(\chi^2_0\)` berdistribusi `\(\chi^2\)` dengan dera
 
 ]
 
+--
 
 .pull-right[
 
 **Contoh**
 
+Seorang peneliti ingin mengetahui apakah terdapat kaitan antara kategori penghasilan dengan kepemilikan kartu kredit. Untuk keperluan tersebut, peneliti mengumpulkan 1000 data secara acak dan diperoleh tabulasi berikut.
+
+&lt;style type="text/css"&gt;
+.tg  {border-collapse:collapse;border-spacing:0;}
+.tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:20px;
+  font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg .tg-cly1{text-align:left;vertical-align:middle}
+.tg .tg-baqh{text-align:center;vertical-align:top}
+.tg .tg-nrix{text-align:center;vertical-align:middle}
+.tg .tg-0lax{text-align:left;vertical-align:top}
+&lt;/style&gt;
+&lt;table class="tg"&gt;
+&lt;thead&gt;
+  &lt;tr&gt;
+    &lt;th class="tg-cly1" rowspan="2"&gt;Penghasilan&lt;/th&gt;
+    &lt;th class="tg-baqh" colspan="2"&gt;Kartu Kredit&lt;/th&gt;
+    &lt;th class="tg-nrix" rowspan="2"&gt;Total&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;th class="tg-baqh"&gt;Punya&lt;/th&gt;
+    &lt;th class="tg-baqh"&gt;Tidak&lt;/th&gt;
+  &lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+  &lt;tr&gt;
+    &lt;td class="tg-0lax"&gt;Tinggi&lt;/td&gt;
+    &lt;td class="tg-baqh"&gt;240&lt;/td&gt;
+    &lt;td class="tg-baqh"&gt;160&lt;/td&gt;
+    &lt;td class="tg-baqh"&gt;400&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td class="tg-0lax"&gt;Rendah&lt;/td&gt;
+    &lt;td class="tg-baqh"&gt;260&lt;/td&gt;
+    &lt;td class="tg-baqh"&gt;340&lt;/td&gt;
+    &lt;td class="tg-baqh"&gt;600&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td class="tg-0lax"&gt;Total&lt;/td&gt;
+    &lt;td class="tg-baqh"&gt;500&lt;/td&gt;
+    &lt;td class="tg-baqh"&gt;500&lt;/td&gt;
+    &lt;td class="tg-baqh"&gt;1000&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+Jika `\(\alpha\)` sebesar 5 persen, apakah cukup bukti untuk mengatakan
+bahwa terdapat keterkaitan antara penghasilan dengan kepemilikan kartu kredit.
+
 ]
 
 ---
 
-.pull.center[
 
-### **Uji Hipotesis**
-
-]
 
 .pull-left[
 
-- Titik Kritis `\(\rightarrow\)` `\(F_{\alpha,(1,n-2)}\)`
+**Hipotesis**
 
-- Daerah penolakan `\(H_0\)`
+- `\(H_0:\)` Tidak ada kaitan antara penghasilan dengan kepemilikan kartu kredit
+- `\(H_1:\)` Ada kaitan antara penghasilan dengan kepemilikan kartu kredit
 
-![](gb_09.jpg)
+**Taraf Nyata**
 
-- Kesimpulan &lt;br&gt;
-  Tolak `\(H_0 \rightarrow\)` Cukup bukti untuk menyatakan bahwa model tersebut
-sesuai/pas pada taraf nyata `\(\alpha\)`
+Taraf nyata yang digunakan adalah `\(5\%\)`
+
+**Statistik Uji**
+
+Statistik uji yang digunakan adalah
+
+`$$\chi^2_0=\sum\limits_{i=1}^2 \sum\limits_{j=i}^2 \dfrac{(O_{ij}-E_{ij})^2}{E_{ij}}$$`
+
+Untuk memudahkan perhitungan `\(E_{ij}\)`, perhatikan tabel berikut.
 
 ]
 
@@ -627,270 +705,226 @@ sesuai/pas pada taraf nyata `\(\alpha\)`
 
 .pull-right[
 
-### Uji parsial (per koefisien) `\(\rightarrow\)` Uji t
+&lt;style type="text/css"&gt;
+.tg  {border-collapse:collapse;border-spacing:0;}
+.tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg .tg-lu4w{background-color:#34cdf9;border-color:#ffffff;text-align:center;vertical-align:top}
+.tg .tg-zv4m{border-color:#ffffff;text-align:left;vertical-align:top}
+.tg .tg-c3ow{border-color:inherit;text-align:center;vertical-align:top}
+.tg .tg-g7sd{border-color:inherit;font-weight:bold;text-align:left;vertical-align:middle}
+.tg .tg-7btt{border-color:inherit;font-weight:bold;text-align:center;vertical-align:top}
+.tg .tg-uzvj{border-color:inherit;font-weight:bold;text-align:center;vertical-align:middle}
+.tg .tg-fymr{border-color:inherit;font-weight:bold;text-align:left;vertical-align:top}
+.tg .tg-yeim{background-color:#67fd9a;border-color:#ffffff;text-align:center;vertical-align:top}
+&lt;/style&gt;
+&lt;table class="tg"&gt;
+&lt;thead&gt;
+  &lt;tr&gt;
+    &lt;th class="tg-g7sd" rowspan="2"&gt;Penghasilan&lt;/th&gt;
+    &lt;th class="tg-7btt" colspan="2"&gt;Kartu Kredit&lt;/th&gt;
+    &lt;th class="tg-uzvj" rowspan="2"&gt;Total&lt;/th&gt;
+    &lt;th class="tg-zv4m"&gt;&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;th class="tg-7btt"&gt;Punya&lt;/th&gt;
+    &lt;th class="tg-7btt"&gt;Tidak&lt;/th&gt;
+    &lt;th class="tg-zv4m"&gt;&lt;/th&gt;
+  &lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+  &lt;tr&gt;
+    &lt;td class="tg-fymr"&gt;Tinggi&lt;/td&gt;
+    &lt;td class="tg-c3ow"&gt; `\(E_{11}\)`&lt;/td&gt;
+    &lt;td class="tg-c3ow"&gt; `\(E_{12}\)`&lt;/td&gt;
+    &lt;td class="tg-c3ow"&gt;400&lt;/td&gt;
+    &lt;td class="tg-lu4w"&gt; `\(B_1\)`&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td class="tg-fymr"&gt;Rendah&lt;/td&gt;
+    &lt;td class="tg-c3ow"&gt; `\(E_{21}\)`&lt;/td&gt;
+    &lt;td class="tg-c3ow"&gt; `\(E_{22}\)`&lt;/td&gt;
+    &lt;td class="tg-c3ow"&gt;600&lt;/td&gt;
+    &lt;td class="tg-lu4w"&gt; `\(B_2\)`&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td class="tg-fymr"&gt;Total&lt;/td&gt;
+    &lt;td class="tg-c3ow"&gt;500&lt;/td&gt;
+    &lt;td class="tg-c3ow"&gt;500&lt;/td&gt;
+    &lt;td class="tg-c3ow"&gt;1000&lt;/td&gt;
+    &lt;td class="tg-zv4m"&gt;&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td class="tg-zv4m"&gt;&lt;/td&gt;
+    &lt;td class="tg-yeim"&gt; `\(K_1\)`&lt;/td&gt;
+    &lt;td class="tg-yeim"&gt; `\(K_2\)`&lt;/td&gt;
+    &lt;td class="tg-zv4m"&gt;&lt;/td&gt;
+    &lt;td class="tg-zv4m"&gt;&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
 
-- Uji apakah peubah penjelas mempengaruhi peubah respon?
-
-  - Hipotesis : &lt;br&gt;
-    `\(H0 : \beta_1 = 0\)` `\((X\)` tidak mempengaruhi `\(Y)\)` &lt;br&gt;
-    `\(H1 : \beta_1 \ne 0\)` `\((X\)` mempengaruhi `\(Y)\)`
-    
-  - Statistik Uji
+&lt;br&gt;
+`\(E_{11}=\dfrac{B_1 \times K_1}{N}=\dfrac{500\times400}{1000}=200\)`&lt;br&gt;
+`\(E_{12}=\dfrac{B_1 \times K_2}{N}=\dfrac{500\times400}{1000}=200\)`&lt;br&gt;
+`\(E_{21}=\dfrac{B_2 \times K_1}{N}=\dfrac{600\times500}{1000}=300\)`&lt;br&gt;
+`\(E_{22}=\dfrac{B_2 \times K_2}{N}=\dfrac{600\times500}{1000}=300\)`
   
-  `$$t_0=(b_1-\beta_1)\sqrt{\dfrac{\text{JK}_{XX}}{\text{KTG}}}$$`
-  - Titik kritis
-  `$$t_{\frac{\alpha}{2},(n-2)}$$`
-  
-]
-
----
-
-.pull.center[
-
-### **Uji Hipotesis**
-
-]
-
-.pull-left[
-
-- Wilayah penolakan `\(H_0\)`
-  
-  ![](gb_08.jpg)
-
-- Kesimpulan &lt;br&gt;
-  Tolak `\(H_0 \rightarrow\)`  Cukup bukti untuk menyatakan bahwa `\(X\)` mempengaruhi `\(Y\)` secara linear pada taraf nyata `\(\alpha\)`
-
-]
-
---
-
-.pull-right[
-
-### Koefisien Determinasi `\((R^2)\)`
-
-### `$$R^2=\dfrac{\text{JKR}}{\text{JKT}}\times100\%$$`
-
-.red[**Interpretasi**] : sebesar `\(R^2\)` keragaman `\(Y\)` mampu dijelaskan
-oleh `\(X\)`, sedangkan sisanya `\((100-R^2)\%\)` dijelaskan oleh faktor lain
-yang tidak dimasukkan dalam model
-
-Dalam regresi linear sederhana:
-`$$(r)^2=R^2$$`
-
-]
-
----
-
-.pull-left[
-
-**Contoh**
-
-Promosi penjualan untuk suatu produk diduga mempengaruhi besar kecilnya penjualan dari produk tersebut. Untuk menguji dugaan tersebut, dipilih 5 buah produk secara acak dan diperoleh data sebagai berikut.
-
-| `\(X\)` | 1 | 2 | 4 | 6 | 7 |
-|:--: |:--: |:--: |:--: |:--: |:--: |
-| `\(Y\)` | 3 | 5 | 7 | 8 | 10 |
-
-di mana:&lt;br&gt;
-`\(X:\)` % kenaikan biaya promosi dalam setahun&lt;br&gt;
-`\(Y:\)` % kenaikan penjualan selama setahun
-
-Tentukan:&lt;br&gt;
-- Peubah respon dan peubah penjelas
-- Apakah model regresi linear sesuai pada `\(\alpha=5\%\)`?
-- Apakah variabel `\(Y\)` mampu dijelaskan oleh variabel `\(X\)` pada `\(\alpha=5\%\)`?
-- Koefisien determinasi
-- Prediksi penjualan jika biaya promosi dinaikan sebesar 5%.
-
-]
-
---
-
-.pull-right[
-
-- Peubah respon: **% kenaikan penjualan selama setahun `\((Y)\)`** &lt;br&gt;
-  Peubah penjelas: **% kenaikan biaya promosi dalam setahun `\((X)\)`**
-  
-- Untuk mengetahui apakah model regresi linear sesuai, maka bisa menggunakan uji simultan (bersama)
-
-|No| `\(X\)` | `\(Y\)` | `\(XY\)` | `\(X^2\)` | `\(Y^2\)` |
-|:--:|:--:|:--:|:--:|:--:|:--:|
-|1|1|3|3|1|9|
-|2|2|5|10|4|25|
-|3|4|7|28|16|49|
-|4|6|8|48|36|64|
-|5|7|10|70|49|100|
-| `\(\sum\)` |20|33|159|106|247|
-
-`\(\sum x_i=20\)`, `\(\sum y_i=33\)`, `\(\sum x_i y_i=159\)` &lt;br&gt;
-`\(\sum x^2_i=106\)`, `\(\sum y^2_i=247\)`
 ]
 
 ---
 
 .pull-left[
 
-Model regresi linear yang digunakan:
-`$$Y_i=\beta_0+\beta_1X_i+\epsilon_i$$`
-Penduga untuk `\(\beta_1\)`:
+Setelah menghitung nilai `\(E_{ij}\)`, maka bisa dibuat tabel seperti berikut untuk memudahkan perhitungan.
+
+&lt;style type="text/css"&gt;
+.tg  {border-collapse:collapse;border-spacing:0;}
+.tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg .tg-c3ow{border-color:inherit;text-align:center;vertical-align:top}
+.tg .tg-g7sd{border-color:inherit;font-weight:bold;text-align:left;vertical-align:middle}
+.tg .tg-7btt{border-color:inherit;font-weight:bold;text-align:center;vertical-align:top}
+.tg .tg-uzvj{border-color:inherit;font-weight:bold;text-align:center;vertical-align:middle}
+.tg .tg-fymr{border-color:inherit;font-weight:bold;text-align:left;vertical-align:top}
+&lt;/style&gt;
+&lt;table class="tg"&gt;
+&lt;thead&gt;
+  &lt;tr&gt;
+    &lt;th class="tg-g7sd" rowspan="2"&gt;Penghasilan&lt;/th&gt;
+    &lt;th class="tg-7btt" colspan="2"&gt;Kartu Kredit&lt;/th&gt;
+    &lt;th class="tg-uzvj" rowspan="2"&gt;Total&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;th class="tg-7btt"&gt;Punya&lt;/th&gt;
+    &lt;th class="tg-7btt"&gt;Tidak&lt;/th&gt;
+  &lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+  &lt;tr&gt;
+    &lt;td class="tg-fymr"&gt;Tinggi&lt;/td&gt;
+    &lt;td class="tg-c3ow"&gt;240 (&lt;span style="font-weight:bold;color:#FE0000"&gt;200&lt;/span&gt;)&lt;/td&gt;
+    &lt;td class="tg-c3ow"&gt;160 (&lt;span style="font-weight:bold;color:#FE0000"&gt;200&lt;/span&gt;)&lt;/td&gt;
+    &lt;td class="tg-c3ow"&gt;400&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td class="tg-fymr"&gt;Rendah&lt;/td&gt;
+    &lt;td class="tg-c3ow"&gt;260 (&lt;span style="font-weight:bold;color:#FE0000"&gt;300&lt;/span&gt;)&lt;/td&gt;
+    &lt;td class="tg-c3ow"&gt;340 (&lt;span style="font-weight:bold;color:#FE0000"&gt;300&lt;/span&gt;)&lt;/td&gt;
+    &lt;td class="tg-c3ow"&gt;600&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td class="tg-fymr"&gt;Total&lt;/td&gt;
+    &lt;td class="tg-c3ow"&gt;500&lt;/td&gt;
+    &lt;td class="tg-c3ow"&gt;500&lt;/td&gt;
+    &lt;td class="tg-c3ow"&gt;1000&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
 `$$\begin{align*}
-b_1&amp;=\dfrac{n\sum x_iy_i-\sum x_i \sum y_i}{n\sum x^2_i-(\sum x_i)^2}\\
-&amp;=\dfrac{5(159)-20(33)}{5(106)-(20)^2} \\
-&amp;=1.04
+\chi^2_0&amp;=\sum\limits_{i=1}^2 \sum\limits_{j=i}^2 \dfrac{(O_{ij}-E_{ij})^2}{E_{ij}}\\
+&amp;=\dfrac{(240-200)^2}{200}+ \dots + \dfrac{(340-300)^2}{300} \\
+&amp;=26.67
 \end{align*}$$`
-Penduga untuk `\(\beta_0\)`:
-`$$\begin{align*}
-b_0&amp;=\bar{Y}-b_1\bar{X} \\
-&amp;=\dfrac{\sum y_i}{n}-b_1\dfrac{\sum x_i}{n} \\
-&amp;=\dfrac{33}{5}-1.04\dfrac{20}{5} \\
-&amp;=2.44
-\end{align*}$$`
+
 ]
 
 --
 
 .pull-right[
 
-Jadi, persamaan regresi linearnya adalah:
-`$$\hat{Y}_i=2.44+1.04X_i$$`
-Setiap kenaikain biaya promosi sebesar 1% akan meningkatkan penjualan sebesar 1.04%
+**Titik Kritis**
+&lt;br&gt;
 
-**Uji Simultan (bersama)**
+`\(\chi^2_{\alpha;(\text{baris}-1)(\text{kolom}-1)}=\chi^2_{0.05;1}=3.84\)`
 
-- Hipotesis : &lt;br&gt;
-    `\(H0 : \beta_1 = 0\)` ( model tidak sesuai/pas) &lt;br&gt;
-    `\(H1 : \beta_1 \ne 0\)` ( model sesuai/pas)
-    
-- Taraf nyata `\(5\%\)`
+`\(H_0\)` ditolak jika `\(\chi^2_0&gt;\chi^2_{0.05;1}\)`
 
-- Statistik Uji
-  
-  `$$F_0=\dfrac{\text{KTR}}{\text{KTG}}$$`
+**Kesimpulan**
 
-`\(\text{JK}_{XY}=\sum x_i y_i-\dfrac{\sum x_i \sum y_i}{n}=159-\dfrac{20(33)}{5}=27\)`
-
-`\(\text{JK}_{YY}=\sum y^2_i-\dfrac{(\sum y_i)^2}{n}=247-\dfrac{(33)^2}{5}=29.2\)`
+Karena `\(\chi^2_0 = 26.67&gt;\chi^2_{0.05;1}\)`, maka `\(H_0\)` ditolak. Cukup bukti untuk mengatakan bahwa terdapat kaitan antara penghasilan dengan kepemilikan kartu kredit pada taraf nyata `\(5\%\)`
 
 ]
 
 ---
 
-
 .pull-left[
-### ANOVA
-
-| Sumber    | db   | Jumlah Kuadrat (JK)    | Kuadrat Tengah (KT)    | `\(F_0\)` |
-|:--        |:--:   | :--:  | :--:  | :--:  |
-| Regresi   | 1     | `\(28.08\)`  | `\(28.08\)` | `\(75.89\)` |
-| Galat     | `\(3\)` | `\(1.12\)`  | `\(0.37\)` |   |
-| Total     | `\(4\)` | `\(29.2\)`  |   |   |
-
-`\(\text{JKT}=\text{JK}_{YY}=29\)`
-
-`\(\text{JKR}=b_1\times\text{JK}_{XY}=1.04\times27=28.08\)`
-
-`\(\text{JKG}=\text{JKT}-\text{JKR}=29.2-28.08=1.12\)`
-
-`\(\text{KTR}=\text{JKR}/1=28.08\)`
-
-`\(\text{KTG}=\text{JKG}/3=1.12/3=0.37\)`
-
-`\(\text{JK}_{XX}=\sum x^2_i-\dfrac{(\sum x_i)^2}{n}=106-\dfrac{(20)^2}{5}=26\)`
-
-]
-
---
-
-.pull-right[
-
-- Titik Kritis
-`$$F_{0.05,(1,3)}=10.13$$`&lt;br&gt;
-`\(H_0\)` ditolak jika `\(F_0&gt;F_{0.05,(1,3)}\)`
-
-- Kesimpulan &lt;br&gt;
-  Karena `\(F_0=75.89&gt;10.13\)`, maka `\(H_0\)` ditolak. Cukup bukti untuk menyatakan bahwa model tersebut sesuai/pas pada taraf nyata `\(5\%\)`
-
-
-**Untuk menguji apakah variabel `\(Y\)` bisa dijelaskan oleh variabel `\(X\)`, maka bisa dilakukan uji parsial**
-
-- Hipotesis : &lt;br&gt;
-    `\(H0 : \beta_1 = 0\)` `\((X\)` tidak mempengaruhi `\(Y)\)` &lt;br&gt;
-    `\(H1 : \beta_1 \ne 0\)` `\((X\)` mempengaruhi `\(Y)\)`
-    
-- Statistik Uji
-  
-`$$t_0=(b_1-\beta_1)\sqrt{\dfrac{\text{JK}_{XX}}{\text{KTG}}}=8.72$$`
- 
-]
----
-
-.pull-left[
-
- - Titik kritis
-  `$$t_{\frac{\alpha}{2},(n-2)}=t_{0.025,3}=3.18$$`
-  `\(H_0\)` ditolak jika `\(t_0&lt;-3.18\)` atau `\(t_0&gt;3.18\)`
-  
-- Kesimpulan &lt;br&gt;
-  Karena `\(t_0=8.72&gt;3.18\)`, maka `\(H_0\)` ditolak. Cukup bukti untuk menyatakan bahwa `\(X\)` mempengaruhi `\(Y\)` secara linear pada taraf nyata `\(5\%\)`
-
-
-**Koefisien Determinasi `\(R^2\)`**
-
-`\(R^2=\dfrac{\text{JKR}}{\text{JKT}}\times100\%=\dfrac{28.08}{29.2}\times100\%=96.2\%\)`
-
-Interpretasi: 96.2% keragaman pada variabel `\(Y\)` mampu dijelaskan
-oleh variabel `\(X\)`, sedangkan sisanya `\(3.8\%\)` keragaman dijelaskan oleh variabel/faktor lain yang tidak dimasukkan dalam model regresi.
-
-]
-
---
-
-.pull-right[
-
-**Prediksi penjualan jika biaya &lt;br&gt; promosi dinaikan sebesar 5%**
-
-Persmaan regresi linear sederhana yang &lt;br&gt; diperoleh adalah
-
-`$$\hat{Y}_i=2.44+1.04X_i$$`
-Jika diketahui % kenaikan biaya promosi sebesar 5% `\((X=5\%)\)`, maka prediksi nilai penjualannya `\((\hat{Y})\)` adalah
-
-`$$\hat{Y}=2.44+1.04(5)=7.64$$`
-Jika kenaikan biaya promosi adalah sebesar 5%, maka penjualan diprediksi akan naik sebesar 7.64%.
-]
-
-
----
-
-.pull-left[
-
-### Keterbatasan Korelasi dan Regresi Linear Sederhana
-- ###Korelasi dan Regresi Linear hanya menggambarkan hubungan yang linear
-- ###Korelasi dan metode kuadrat terkecil pada regresi linear tidak resisten terhadap pencilan
-- ###Prediksi di luar selang nilai X tidak diperkenankan karena kurang akurat
-- ###Hubungan antara dua peubah bisa dipengaruhi oleh peubah lain di luar model
-]
-
---
-
-.pull-right[
 
 **Latihan**
 
-Apakah semakin tua mobil semakin besar juga emisi HC yang dihasilkan?
+Seorang peneliti ingin mengetahui apakah terdapat kaitan antara jenis kelamin dengan kelompok yang setuju dan tidak setuju dengan hukuman mati di Amerika. Untuk keperluan tersebut, peneliti tersebut melakukan survey acak kepada 200 warga dengan didapat hasil tabulasi berikut.
 
-Diambil contoh 10 mobil secara acak, kemudian dicatat jarak tempuh yang sudah dijalani mobil (dalam ribu kilometer) dan diukur Emisi HC-nya (dalam ppm)
+&lt;style type="text/css"&gt;
+.tg  {border-collapse:collapse;border-spacing:0;}
+.tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg .tg-c3ow{border-color:inherit;text-align:center;vertical-align:top}
+.tg .tg-g7sd{border-color:inherit;font-weight:bold;text-align:left;vertical-align:middle}
+.tg .tg-7btt{border-color:inherit;font-weight:bold;text-align:center;vertical-align:top}
+.tg .tg-uzvj{border-color:inherit;font-weight:bold;text-align:center;vertical-align:middle}
+.tg .tg-fymr{border-color:inherit;font-weight:bold;text-align:left;vertical-align:top}
+&lt;/style&gt;
+&lt;table class="tg"&gt;
+&lt;thead&gt;
+  &lt;tr&gt;
+    &lt;th class="tg-g7sd" rowspan="2"&gt;Jenis Kelamin&lt;/th&gt;
+    &lt;th class="tg-7btt" colspan="2"&gt;Hukuman Mati&lt;/th&gt;
+    &lt;th class="tg-uzvj" rowspan="2"&gt;Total&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;th class="tg-7btt"&gt;Setuju&lt;/th&gt;
+    &lt;th class="tg-7btt"&gt;Tidak&lt;/th&gt;
+  &lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+  &lt;tr&gt;
+    &lt;td class="tg-fymr"&gt;Laki-Laki&lt;/td&gt;
+    &lt;td class="tg-c3ow"&gt;71&lt;/td&gt;
+    &lt;td class="tg-c3ow"&gt;29&lt;/td&gt;
+    &lt;td class="tg-c3ow"&gt;100&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td class="tg-fymr"&gt;Perempuan&lt;/td&gt;
+    &lt;td class="tg-c3ow"&gt;62&lt;/td&gt;
+    &lt;td class="tg-c3ow"&gt;38&lt;/td&gt;
+    &lt;td class="tg-c3ow"&gt;100&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td class="tg-fymr"&gt;Total&lt;/td&gt;
+    &lt;td class="tg-c3ow"&gt;133&lt;/td&gt;
+    &lt;td class="tg-c3ow"&gt;67&lt;/td&gt;
+    &lt;td class="tg-c3ow"&gt;200&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
 
-|Jarak|31|38|48|52|63|67|75|84|89|99|
-|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|
-|Emisi|553|590|608|682|752|725|834|752|845|960|
+Jika `\(\alpha\)` sebesar 5 persen, apakah cukup bukti untuk mengatakan
+bahwa terdapat keterkaitan antara jenis kelamin dengan pendapat tentang hukuman mati di Amerika.
 
-Tentukan:&lt;br&gt;
-- Peubah respon dan peubah penjelas
-- Apakah model regresi linear sesuai pada `\(\alpha=5\%\)`?
-- Apakah variabel `\(Y\)` mampu dijelaskan oleh variabel `\(X\)` pada `\(\alpha=5\%\)`?
-- Koefisien determinasi
-- Dugaan emisi yang dihasilkan jika jarak 50 dan 200
+]
 
+--
+
+.pull-right[
+
+**Materi UAS**
+
+1. Pendugaan Parameter
+
+1. Uji Hipotesis
+
+1. Korelasi
+
+1. Regresi Linear Sederhana
+
+1. Uji Asosiasi - Chi Square
 ]
 
 ---
