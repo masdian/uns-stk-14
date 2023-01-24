@@ -348,6 +348,73 @@ Karena $F_0=22.63>F_{0.05,(2,12)}$, maka $H_0$ ditolak. Cukup bukti untuk menyat
 
 .pull-right[
 
+### ANOVA satu faktor dengan R
+
+Data harus disimpan dalam bentuk dataframe dengan dua variabel. Pertama, variabel yang memuat identitas Kabupaten (Kab A, Kab B, dan Kab C). Kedua, variabel yang memuat hasil panen. Misalkan nama dataframenya adalah .green[**`karet`**], sedangkan variabelnya adalah .red[**`Kabupaten`**] dan .red[**`Hasil`**].
+
+Berikut adalah sintaks yang digunakan untuk menyimpan data ke dalam dataframe .green[**`karet`**].
+
+```{r eval=FALSE}
+karet <- data.frame(Kabupaten = c(rep(c("A","B","C"), each = 5)),
+                    Hasil = c(5,7,6,7,8,10,11,9,12,10,7,6,4,3,5))
+```
+
+Untuk melihat bentuk dataframe .green[**`karet`**] yang telah dibuat, jalankan sintaks berikut (ketik `karet` di console kemudian tekan enter)
+
+```{r eval=FALSE}
+karet
+```
+
+]
+
+---
+
+.pull-left[
+
+Berikut adalah tampilan dataframe .green[**`karet`**].
+
+```{r echo=FALSE}
+karet <- data.frame(Kabupaten = c(rep(c("A","B","C"), each = 5)),
+                    Hasil = c(5,7,6,7,8,10,11,9,12,10,7,6,4,3,5))
+karet
+```
+
+Langkah selanjutnya adalah membuat model linier dengan menggunakan fungsi `lm()`. Misalkan model linier yang akan dibuat diberi nama .red[**`mod_karet`**].
+
+```{r eval=FALSE}
+mod_karet <- lm(Hasil ~ Kabupaten,
+                data = karet)
+```
+
+]
+
+.pull-right[
+
+Jika ingin melihat tabel ANOVA yang <br> dihasilkan, gunakan sintaks berikut.
+
+```{r eval=FALSE}
+anova(mod_karet)
+```
+Berikut adalah tabel ANOVA yang dihasilkan
+
+```{r echo=FALSE}
+karet <- data.frame(Kabupaten = c(rep(c("A","B","C"), each = 5)),
+                    Hasil = c(5,7,6,7,8,10,11,9,12,10,7,6,4,3,5))
+mod_karet <- lm(Hasil ~ Kabupaten,
+                data = karet)
+anova(mod_karet)
+```
+
+
+### .red[Apakah hasilnya sama dengan perhitungan manual?]
+
+]
+
+---
+
+
+.pull-left[
+
 **Latihan**
 
 Terdapat 3 kabupaten yang memiliki hasil produksi karet di Jawa Timur. Masing-masing kabupaten diambil hasil produksi pada 5 lahan karet yang berbeda. Diperoleh hasil sebagai berikut (dalam ton):
@@ -381,8 +448,6 @@ Apakah terdapat rataan hasil produksi yang berbeda pada ketiga kabupaten tersebu
 - Dapat digunakan pada populasi yang bebas distribusi dengan kata lain distribusi normal atau tidak normal
 
 - Dapat digunakan pada jumlah sampel lebih kecil
-
-
 
 ]
 
@@ -822,6 +887,114 @@ $H_0$ ditolak jika $\chi^2_0>\chi^2_{0.05;1}$
 **Kesimpulan**
 
 Karena $\chi^2_0 = 26.67>\chi^2_{0.05;1}$, maka $H_0$ ditolak. Cukup bukti untuk mengatakan bahwa terdapat kaitan antara penghasilan dengan kepemilikan kartu kredit pada taraf nyata $5\%$
+
+]
+
+---
+
+.pull-left[
+
+### Uji Asosiasi Chi-Square dengan R
+
+Lihat kembali contoh pada slide sebelumnya. Jika $\alpha$ sebesar 5 persen, apakah cukup bukti untuk mengatakan bahwa terdapat keterkaitan antara penghasilan dengan kepemilikan kartu kredit.
+
+
+<style type="text/css">
+.tg  {border-collapse:collapse;border-spacing:0;}
+.tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:20px;
+  font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg .tg-cly1{text-align:left;vertical-align:middle}
+.tg .tg-baqh{text-align:center;vertical-align:top}
+.tg .tg-nrix{text-align:center;vertical-align:middle}
+.tg .tg-0lax{text-align:left;vertical-align:top}
+</style>
+<table class="tg">
+<thead>
+  <tr>
+    <th class="tg-cly1" rowspan="2">Penghasilan</th>
+    <th class="tg-baqh" colspan="2">Kartu Kredit</th>
+    <th class="tg-nrix" rowspan="2">Total</th>
+  </tr>
+  <tr>
+    <th class="tg-baqh">Punya</th>
+    <th class="tg-baqh">Tidak</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td class="tg-0lax">Tinggi</td>
+    <td class="tg-baqh">240</td>
+    <td class="tg-baqh">160</td>
+    <td class="tg-baqh">400</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">Rendah</td>
+    <td class="tg-baqh">260</td>
+    <td class="tg-baqh">340</td>
+    <td class="tg-baqh">600</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">Total</td>
+    <td class="tg-baqh">500</td>
+    <td class="tg-baqh">500</td>
+    <td class="tg-baqh">1000</td>
+  </tr>
+</tbody>
+</table>
+
+Langkah pertama adalah menuliskan data ke dalam R (R bisa diakses secara online di **https://colab.to/r**).
+
+Berikut adalah sintaks untuk menuliskan data dari tabel di atas ke dalam R.
+
+]
+
+
+.pull-right[
+<br><br><br><br>
+```{r}
+data <- matrix(c(240, 260, 160, 340), nrow = 2)
+dimnames(data) <- list(Penghasilan = c("Tinggi", "Rendah"),
+                       Kartu_Kredit = c("Punya", "Tidak"))
+```
+Jalankan sintaks berikut jika ingin melihat tampilan data yang sudah diinput ke dalam R.
+
+```{r eval=FALSE}
+data
+```
+Berikut adalah tampilan data yang sudah diinput
+
+```{r echo=FALSE}
+data <- matrix(c(240, 260, 160, 340), nrow = 2)
+dimnames(data) <- list(Penghasilan = c("Tinggi", "Rendah"),
+                       Kartu_Kredit = c("Punya", "Tidak"))
+data
+```
+
+]
+
+---
+
+.pull-left[
+### Uji Asosiasi Chi-Square dengan R
+
+Uji Asosiasi Chi-Square di R menggunakan fungsi `chisq.test()` yang bisa langsung dijalankan tanpa menggunakan `package` tambahan. Berikut adalah sintaks yang digunakan.
+
+```{r eval=FALSE}
+chisq.test(data)
+```
+Berikut adalah output yang dihasilkan
+
+```{r echo=FALSE}
+data <- matrix(c(240, 260, 160, 340), nrow = 2)
+dimnames(data) <- list(Penghasilan = c("Tinggi", "Rendah"),
+                       Kartu_Kredit = c("Punya", "Tidak"))
+chisq.test(data)
+```
+
+### Apakah hasilnya sama dengan perhitungan manual?
+
 
 ]
 
